@@ -12,7 +12,7 @@ canvas.height=window.innerHeight;
 (function setup(){
   angle = 0;
 	window.setInterval(() => {
-    angle += 0.1;
+    if (rotate === true) angle += 0.1;
     c.clearRect(0,0,canvas.width*3/2,canvas.height*3/2);
     c.translate(canvas.width/2,canvas.height/2)
     if (rotate === true) c.rotate(angle);

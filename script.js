@@ -7,7 +7,7 @@ var angle;
 var rotate = true;
 
 canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+canvas.height=window.innerHeight/2;
 
 (function setup(){
   angle = 0;

@@ -15,11 +15,11 @@ canvas.height=window.innerHeight;
     if (rotate === true) angle += 0.1;
     c.clearRect(0,0,canvas.width*3/2,canvas.height*3/2);
     c.translate(canvas.width/2,canvas.height/2)
-    if (rotate === true) c.rotate(angle);
+    c.rotate(angle);
 //rotated stuff
     c.fillText("hewwo",0,0);
 
-    if (rotate === true) c.rotate(-angle);
+    c.rotate(-angle);
     c.fillText("HEWWO", 10,10);
 //normal stuff
 

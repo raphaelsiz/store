@@ -4,7 +4,7 @@ const canvas = document.querySelector(".canvas");
 const c = canvas.getContext("2d");
 
 var angle;
-var rotate;
+var rotate = true;
 
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;

@@ -4,6 +4,7 @@ const canvas = document.querySelector(".canvas");
 const c = canvas.getContext("2d");
 
 var angle;
+var rotate;
 
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
@@ -14,11 +15,11 @@ canvas.height=window.innerHeight;
     angle += 0.1;
     c.clearRect(0,0,canvas.width*3/2,canvas.height*3/2);
     c.translate(canvas.width/2,canvas.height/2)
-    c.rotate(angle);
+    if (rotate === true) c.rotate(angle);
 //rotated stuff
     c.fillText("hewwo",0,0);
 
-    c.rotate(-angle);
+    if (rotate === true) c.rotate(-angle);
     c.fillText("HEWWO", 10,10);
 //normal stuff
 
@@ -33,25 +34,6 @@ window.addEventListener('resize',function(event){
 });
 
 window.addEventListener('click',function(event){
-  c.restore();
-  if (page=="menu"){
-    for (let i = 0; i < buttons.length; i++){
-      let die = buttons[i];
-      if (event.x >= die.x && event.x <= die.x + 64 && event.y >= die.y && event.y <= die.y + 64) {
-        page = "dice";
-        set = i;
-      }
-    }
-  }
-  if (page=="dice"){
-    for (let i = 0; i < dice.length; i++){
-      let die = dice[i];
-      if (event.x >= die.x && event.x <= die.x + 64 && event.y >= die.y && event.y <= die.y + 64) {
-        die.num = "";
-        die.draw();
-        die.num = Math.floor(Math.random()*die.max + 1);
-      }
-    }
-    if (event.x >= canvas.width-200 && event.y >= canvas.height-50 && event.x <= canvas.width-50 && event.y <= canvas.height-15) page = "menu";
-  }
+  if (rotate === true) rotate = false;
+  else if (rotate === false) rotate = true;
 });

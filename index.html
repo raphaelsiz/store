@@ -11,6 +11,11 @@
   <body>
     <script src="https://www.paypal.com/sdk/js?client-id=AcW3TDR5BIwM9HUVlLJvITP9fo_w5mSdOUCu-PSqtRhl8S1ozx5LeZdDMiIVuC7lfhgRGE8qaiG-rFgT">
     </script>
+    <!-- type
+    outside fabric
+    inside fabric
+    size
+    special size instructions -->
     <label>Mask type:</label>
     <select name="type" id="type">
       <option value="surgical">Surgical style mask</option>
@@ -18,6 +23,18 @@
     </select>
     <label>What fabric do you want on the outside?</label>
     <select name="outside" id="outside">
+      <optgroup label="Used fabrics (Good for the environment!)">
+        <option value="khaki">Khaki</option>
+        <option value="green-khaki">Green Khaki</option>
+        <option value="curtain">Red Curtain</option>
+      </optgroup>
+      <optgroup label="New fabrics">
+        <option value="lavendar">Lavendar Cotton</option>
+        <option value="aqua">Aqua Cotton</option>
+      </optgroup>
+    </select>
+    <label>What fabric do you want on the inside?</label>
+    <select name="lining" id="lining">
       <optgroup label="Used fabrics (Good for the environment!)">
         <option value="khaki">Khaki</option>
         <option value="green-khaki">Green Khaki</option>

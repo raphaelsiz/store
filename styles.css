@@ -1,5 +1,6 @@
 div.header {
   background: #aa00aa;
+  margin: 0px;
 }
 ul {
   list-style: none;
@@ -7,4 +8,10 @@ ul {
 ul.header {
   display: flex;
   color: white;
+}
+li {
+  right: 45px;
+}
+a {
+  text-decoration: none;
 }

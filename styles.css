@@ -31,8 +31,8 @@ div.content {
   margin-top: 60px;
 }
 div.paypal-button-container {
-  display: inline;
+  float: right;
 }
 div.product {
-  display: inline;
+  float: left;
 }

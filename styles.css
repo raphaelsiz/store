@@ -37,9 +37,9 @@ div.content {
 div.paypal {
   margin-top: 45px;
   float: right;
-  /*width: 50%;*/
+  width: 50%;
 }
 div.product {
   float: left;
-  /*width: 50%;*/
+  width: 50%;
 }

@@ -22,7 +22,10 @@
         },
         onApprove: function(data, actions) {
           return actions.order.capture().then(function(details) {
-            alert('Transaction completed by ' + details.payer.name.given_name);
+            emailjs.send("service_7kldg0k","template_byjn2ur",{
+              message: "testing",
+              reply_to: "email",
+            });
           });
         }
       }).render('#paypal-button-container'); // Display payment options on your web page

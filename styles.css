@@ -32,7 +32,9 @@ div.content {
 }
 div.paypal-button-container {
   float: right;
+  width: 50%;
 }
 div.product {
   float: left;
+  width: 50%;
 }

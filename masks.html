@@ -24,7 +24,7 @@
     size
     special size instructions -->
     <div class="content">
-      <div class="product">
+      <div class="product" id="mask">
         <ul class="form" id="mask-form">
           <li> 
             <label>Mask type:</label>
@@ -79,7 +79,7 @@
           </li>
         </ul>
       </div>
-      <div id="paypal-button-container"></div>
+      <div class="paypal" id="paypal-button-container"></div>
       <script>
         paypal.Buttons({
           createOrder: function(data, actions) {

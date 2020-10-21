@@ -34,8 +34,8 @@ div.content {
   margin-top: 60px;
   width: 100%
 }
-div.paypal-button-container {
-  margin-top: 420px;
+div.paypal {
+  margin-top: 45px;
   float: right;
   width: 50%;
 }

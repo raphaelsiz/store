@@ -1,5 +1,15 @@
 (function() {
   emailjs.init("user_4mxAmtDTezCeC2AZzTxs8");
+  var maskDiv = document.getElementById("mask");
+  var paypalDiv = document.getElementById("paypal-button-container");
+  if (window.innerWidth > window.innerHeight) {
+    maskDiv.style.width = "50%";
+    paypalDiv.style.width = "50%";
+  }
+  else {
+    maskDiv.style.width = "100%";
+    paypalDiv.style.width = "100%"
+  }
 })();
 function order(email) {
   var price;
@@ -40,3 +50,15 @@ function order(email) {
     document.getElementById("mask-form").appendChild(p);
   }
 };
+window.addEventListener('resize',function(event){
+  var maskDiv = document.getElementById("mask");
+  var paypalDiv = document.getElementById("paypal-button-container");
+  if (window.innerWidth > window.innerHeight) {
+    maskDiv.style.width = "50%";
+    paypalDiv.style.width = "50%";
+  }
+  else {
+    maskDiv.style.width = "100%";
+    paypalDiv.style.width = "100%"
+  }
+});

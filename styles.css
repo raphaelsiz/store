@@ -1,6 +1,8 @@
 div.header {
   background: #aa00aa;
   margin: 0px;
+  width: 100%;
+  top: 0px;
 }
 ul {
   list-style: none;
@@ -12,6 +14,7 @@ ul.header {
 li {
   right: 45px;
 }
-a {
+div.header a {
   text-decoration: none;
+  color: white;
 }

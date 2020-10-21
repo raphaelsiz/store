@@ -27,5 +27,5 @@ div.header a {
   color: white;
 }
 div.content {
-  position: relative;
+  position: absolute;
 }

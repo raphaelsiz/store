@@ -10,9 +10,16 @@
     </script>
     <input id="message" type="text"></input>
     <input id="test" type "text"></input>
-    <button id="button">testing</button>
+    <button id="button" onClick="testing()">testing</button>
     <div id="paypal-button-container"></div>
     <script>
+      function testing() {
+        var test = document.getElementById("test").value;
+        emailjs.send("service_7kldg0k","template_byjn2ur",{
+          message: test,
+          reply_to: "email",
+        });
+      };
       paypal.Buttons({
         createOrder: function(data, actions) {
           return actions.order.create({

@@ -2,7 +2,7 @@ div.header {
   background: #aa00aa;
 }
 ul {
-  list-style-type: none;
+  list-style: none;
 }
 ul.header {
   display: flex;

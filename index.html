@@ -3,6 +3,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+    <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+      <scripttype="text/javascript">
+      (function() {
+        emailjs.init("user_4mxAmtDTezCeC2AZzTxs8");
+      })();
+    </script>
   </head>
 
   <body>
@@ -16,8 +22,7 @@
       function testing() {
         var test = document.getElementById("test").value;
         emailjs.send("service_7kldg0k","template_byjn2ur",{
-          message: test,
-          reply_to: "email",
+          message: "hello",
         });
       };
       paypal.Buttons({

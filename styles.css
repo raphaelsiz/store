@@ -30,3 +30,6 @@ div.content {
   position: absolute;
   margin-top: 60px;
 }
+div.paypal-button-container {
+  display: inline;
+}

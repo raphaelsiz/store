@@ -28,4 +28,5 @@ div.header a {
 }
 div.content {
   position: absolute;
+  margin: 20px;
 }

@@ -8,7 +8,7 @@ function testing() {
   else price = 5;
   var outsideSelect = document.getElementById("outside");
   var liningSelect = document.getElementById("lining");
-  if (outsideSelect.value == "khaki" || outsideSelect.value == "green-khaki" || liningSelect == "khaki" || liningSelect == "green-khaki") price += 2.5;
+  if (outsideSelect.value == "khaki" || outsideSelect.value == "green-khaki" || liningSelect.value == "khaki" || liningSelect.value == "green-khaki") price += 2.5;
   var sizeSelect = document.getElementById("size");
   var outsideValue = outsideSelect.options[outsideSelect.selectedIndex].text;
   var liningValue = liningSelect.options[liningSelect.selectedIndex].text;

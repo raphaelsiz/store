@@ -77,25 +77,25 @@
           <button id="button" onClick="order(false)">Check Price</button>
         </li>
       </ul>
+      <div id="paypal-button-container"></div>
+      <script>
+        paypal.Buttons({
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{
+                amount: {
+                  value: '0.01'
+                }
+              }]
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+              order(true);
+            });
+          }
+        }).render('#paypal-button-container');
+      </script>
     </div>
-  <div id="paypal-button-container"></div>
-    <script>
-      paypal.Buttons({
-        createOrder: function(data, actions) {
-          return actions.order.create({
-            purchase_units: [{
-              amount: {
-                value: '0.01'
-              }
-            }]
-          });
-        },
-        onApprove: function(data, actions) {
-          return actions.order.capture().then(function(details) {
-            order(true);
-          });
-        }
-      }).render('#paypal-button-container');
-    </script>
   </body>
 </html>

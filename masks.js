@@ -1,7 +1,7 @@
 (function() {
   emailjs.init("user_4mxAmtDTezCeC2AZzTxs8");
 })();
-function testing() {
+function order(email) {
   var price;
   var typeSelect = document.getElementById("type");
   if (typeSelect.value == "surgical") price = 2.5;
@@ -10,11 +10,13 @@ function testing() {
   var liningSelect = document.getElementById("lining");
   if (outsideSelect.value == "khaki" || outsideSelect.value == "green-khaki" || liningSelect.value == "khaki" || liningSelect.value == "green-khaki") price += 2.5;
   var sizeSelect = document.getElementById("size");
+  var typeValue = typeSelect.options[typeSelect.selectedIndex].text;
   var outsideValue = outsideSelect.options[outsideSelect.selectedIndex].text;
   var liningValue = liningSelect.options[liningSelect.selectedIndex].text;
   var sizeValue = sizeSelect.options[sizeSelect.selectedIndex].text;
   var specialInstructions = document.getElementById("special").value;
-  var string1 = "Outside fabric: ";
+  var string0 = "Product: "
+  var string1 = ". Outside fabric: ";
   var string2 = ". Lining: "
   var string3 = ". Size: ";
   var string4, string5;
@@ -26,11 +28,15 @@ function testing() {
     string4 = " (Special Instructions: ";
     string5 = ")."
   }
-  var order = string1.concat(outsideValue,string2,liningValue,string3,sizeValue,string4,specialInstructions,string5);
-  /*emailjs.send("service_7kldg0k","template_byjn2ur",{
-    message: order,
-  });*/
-  var p = document.createElement("P");
-  p.innerText = price;
-  document.body.appendChild(p);
+  var order = string0.concat(typeValue,string1,outsideValue,string2,liningValue,string3,sizeValue,string4,specialInstructions,string5);
+  if (email){
+    emailjs.send("service_7kldg0k","template_byjn2ur",{
+      message: order,
+    });
+  }
+  else{
+    var p = document.createElement("P");
+    p.innerText = price;
+    document.body.appendChild(p);
+  }
 };

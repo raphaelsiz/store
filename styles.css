@@ -11,14 +11,14 @@ div.header {
   top: 0px;
   left: 0px;
 }
-ul {
+ul.form {
   list-style: none;
 }
 ul.header {
   display: flex;
   color: white;
 }
-li {
+ul.header li {
   margin-right: 45px;
 }
 div.header a {

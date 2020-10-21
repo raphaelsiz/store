@@ -4,7 +4,7 @@ body {
 }
 div.header {
   background: #aa00aa;
-  positio
+  position: absolute;
   margin: 0px;
   padding: 0px;
   width: 100%;

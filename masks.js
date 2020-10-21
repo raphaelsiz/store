@@ -14,7 +14,7 @@
 function order(email) {
   var price;
   var typeSelect = document.getElementById("type");
-  if (typeSelect.value == "surgical") price = 2.5;
+  if (typeSelect.value == "surgical") price = 3;
   else price = 5;
   var outsideSelect = document.getElementById("outside");
   var liningSelect = document.getElementById("lining");

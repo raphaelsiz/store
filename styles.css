@@ -14,6 +14,9 @@ div.header {
 ul.form {
   list-style: none;
 }
+ul.form li {
+  margin-bottom: 45 px;
+}
 ul.header {
   display: flex;
   color: white;

@@ -29,6 +29,7 @@ div.header a {
 div.content {
   position: absolute;
   margin-top: 60px;
+  width: 100%
 }
 div.paypal-button-container {
   float: right;

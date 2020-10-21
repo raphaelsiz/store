@@ -37,6 +37,6 @@ function order(email) {
   else{
     var p = document.createElement("P");
     p.innerText = price;
-    document.body.appendChild(p);
+    document.getElementById("mask-form").appendChild(p);
   }
 };

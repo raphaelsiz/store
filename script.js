@@ -27,9 +27,9 @@ function testing() {
     string5 = ")."
   }
   var order = string1.concat(outsideValue,string2,liningValue,string3,sizeValue,string4,specialInstructions,string5);
-  emailjs.send("service_7kldg0k","template_byjn2ur",{
+  /*emailjs.send("service_7kldg0k","template_byjn2ur",{
     message: order,
-  });
+  });*/
   var p = document.createElement("P");
   p.innerText = price;
   document.body.appendChild(p);

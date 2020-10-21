@@ -17,6 +17,7 @@ ul.form {
 ul.header {
   display: flex;
   color: white;
+  list-style: none;
 }
 ul.header li {
   margin-right: 45px;
@@ -24,4 +25,7 @@ ul.header li {
 div.header a {
   text-decoration: none;
   color: white;
+}
+div.content {
+  position: relative;
 }

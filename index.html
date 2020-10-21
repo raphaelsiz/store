@@ -3,28 +3,44 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
-    <scripttype="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-      <scripttype="text/javascript">
-      (function() {
-        emailjs.init("user_4mxAmtDTezCeC2AZzTxs8");
-      })();
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+      <script type="text/javascript"src="script.js">
     </script>
   </head>
 
   <body>
     <script src="https://www.paypal.com/sdk/js?client-id=AcW3TDR5BIwM9HUVlLJvITP9fo_w5mSdOUCu-PSqtRhl8S1ozx5LeZdDMiIVuC7lfhgRGE8qaiG-rFgT">
     </script>
-    <input id="message" type="text"></input>
-    <input id="test" type "text"></input>
+    <label>Mask type:</label>
+    <select name="type" id="type">
+      <option value="surgical">Surgical style mask</option>
+      <option value="fitted">Fitted mask</option>
+    </select>
+    <label>What fabric do you want on the outside?</label>
+    <select name="outside" id="outside">
+      <optgroup label="Used fabrics (Good for the environment!)">
+        <option value="khaki">Khaki</option>
+        <option value="green-khaki">Green Khaki</option>
+        <option value="curtain">Red Curtain</option>
+      </optgroup>
+      <optgroup label="New fabrics">
+        <option value="lavendar">Lavendar Cotton</option>
+        <option value="aqua">Aqua Cotton</option>
+      </optgroup>
+    </select>
+    <label>What size face do you have?</label>
+    <select name="size" id="size">
+      <option value="tiny">Tiny</option>
+      <option value="small">On the small side</option>
+      <option value="regular">I fit in most one-size-fits-all</option>
+      <option value="large">Large</option>
+      <option vaue="other">I have special instructions</option>
+    </select>
+    <label>Special instructions for size?</label>
+    <input id="special" type="text"></input>
     <button id="button" onClick="testing()">testing</button>
     <div id="paypal-button-container"></div>
     <script>
-      function testing() {
-        var test = document.getElementById("test").value;
-        emailjs.send("service_7kldg0k","template_byjn2ur",{
-          message: "hello",
-        });
-      };
       paypal.Buttons({
         createOrder: function(data, actions) {
           return actions.order.create({
@@ -37,12 +53,7 @@
         },
         onApprove: function(data, actions) {
           return actions.order.capture().then(function(details) {
-            var test = "test";
-            test = document.getElementById("message").value;
-            emailjs.send("service_7kldg0k","template_byjn2ur",{
-              message: test,
-              reply_to: "email",
-            });
+            testing();
           });
         }
       }).render('#paypal-button-container');
